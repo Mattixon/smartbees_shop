@@ -1,0 +1,10 @@
+name: Smartbees Shop
+type: module
+description: Module with one page checkout functionality.
+core_version_requirement: ^9
+configure: smartbees_shop.order_checkout
+
+project: smartbees_shop
+'interface translation project': smartbees_shop
+'interface translation server pattern': modules/custom/smartbees_shop/translations/%language.po
+

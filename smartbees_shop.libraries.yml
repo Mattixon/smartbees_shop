@@ -1,0 +1,8 @@
+CheckoutForm:
+  css:
+    theme:
+      css/style.css: { }
+  js:
+    js/OrderCheckoutForm.js: { }
+  dependencies:
+    - core/jquery

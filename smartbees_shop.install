@@ -1,0 +1,178 @@
+<?php
+
+/**
+ * @file
+ * Install schema for the Smartbees Shop module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function smartbees_shop_schema(): array {
+
+  /**
+   * @schema
+   * Contain user's data.
+   */
+  $schema['smartbees_shop_user'] = [
+    'description' => 'Stores all user\'s data',
+    'fields' => [
+      'user_id' => [
+        'description' => 'User id',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ],
+      'username' => [
+        'description' => 'User name',
+        'type' => 'varchar',
+        'length' => 255
+      ],
+      'password' => [
+        'description' => 'User password',
+        'type' => 'varchar',
+        'length' => 255
+      ],
+      'name' => [
+        'description' => 'User name',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ],
+      'surname' => [
+        'description' => 'User surname',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ],
+      'country' => [
+        'description' => 'User living country',
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'address' => [
+        'description' => 'User living address',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ],
+      'zip' => [
+        'description' => 'User living zip code',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ],
+      'city' => [
+        'description' => 'User living city.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE
+      ],
+      'phone' => [
+        'description' => 'User phone number.',
+        'type' => 'int',
+        'not null' => TRUE
+      ]
+    ],
+    'primary key' => ['user_id']
+  ];
+
+  /**
+   * @schema
+   * Contain all user's orders.
+   */
+  $schema['smartbees_shop_order'] = [
+    'description' => 'Stores all user\'s orders.',
+    'fields' => [
+      'order_id' => [
+        'description' => 'Order id.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ],
+      'user_id' => [
+        'description' => 'Foreign Key to user.',
+        'type' => 'int',
+      ],
+      'delivery' => [
+        'description' => 'Delivery method.',
+        'type' => 'varchar',
+        'length' => 255
+      ],
+      'payment' => [
+        'description' => 'Payment method.',
+        'type' => 'varchar',
+        'length' => 255
+      ],
+      'comment' => [
+        'description' => 'Order comment.',
+        'type' => 'text',
+      ],
+      'different_address' => [
+        'description' => 'Boolean is different address?',
+        'type' => 'int',
+        'size' => 'tiny',
+        'length' => 1,
+        'default' => 0
+      ],
+      'country' => [
+        'description' => 'User delivery country.',
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'address' => [
+        'description' => 'User delivery address.',
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'zip' => [
+        'description' => 'User delivery zip code.',
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'city' => [
+        'description' => 'User delivery city.',
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+    ],
+    'primary key' => ['order_id'],
+    'foreign keys' => [
+      'user_id' => [
+        'table' => 'smartbees_shop_user',
+        'columns' => ['user_id'],
+      ]
+    ],
+  ];
+
+  /**
+   * @schema
+   * Contain discount codes.
+   */
+  $schema['smartbees_shop_discount'] = [
+    'description' => 'Stores discount codes.',
+    'fields' => [
+      'code_id' => [
+        'description' => 'Code id.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ],
+      'name' => [
+        'description' => 'Code name.',
+        'type' => 'varchar',
+        'length' => 255,
+      ],
+      'is_active' => [
+        'description' => 'Is the code active?',
+        'type' => 'int',
+        'size' => 'tiny',
+        'length' => 1,
+        'default' => 0
+      ],
+    ],
+    'primary key' => ['code_id'],
+  ];
+
+  return $schema;
+}

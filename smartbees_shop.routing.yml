@@ -1,0 +1,7 @@
+smartbees_shop.order_checkout:
+  path: '/order-checkout'
+  defaults:
+    _form: 'Drupal\smartbees_shop\Form\OrderCheckoutForm'
+    _title: 'Order checkout'
+  requirements:
+    _permission: 'access content'

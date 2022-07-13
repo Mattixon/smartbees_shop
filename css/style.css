@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+/* COLORS */
+/* DEFAULT */
+* {
+  box-sizing: border-box; }
+
+h1 {
+  margin: 50px 15px;
+  font-family: Barlow, serif;
+  font-size: 40px; }
+
+/* FORM */
+form {
+  margin: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Barlow, serif;
+  /* GLOBAL */
+  /* USER DATA */
+  /* DELIVERY AND PAYMENT */
+  /* SUMMARY */ }
+  form > div {
+    width: 32%; }
+    form > div h2 {
+      color: #ffffff;
+      background: #a89f8f;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin: 0 0 15px 0;
+      padding: .5em .7em;
+      font-size: 25px;
+      border-radius: 3px; }
+  form input[type=text], form input[type=password], form input[type=tel], form select, form textarea {
+    width: 100%;
+    border: 1px solid #a89f8f;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: .6em .8em;
+    margin-bottom: 15px;
+    background: none; }
+    form input[type=text]:focus, form input[type=password]:focus, form input[type=tel]:focus, form select:focus, form textarea:focus {
+      outline: none; }
+  form select {
+    padding: .6em .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../images/arrow down.svg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%; }
+    form select option {
+      background-color: #ffffff;
+      color: #000000; }
+  form div.user-data {
+    /* LOGIN */
+    /* NEW ACCOUNT */ }
+    form div.user-data > div.form-item-log-in-button {
+      position: relative;
+      font-size: 22px;
+      color: #e54444;
+      background: none;
+      border: 2px solid #e54444;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: .2s; }
+      form div.user-data > div.form-item-log-in-button input {
+        width: 100%;
+        display: block;
+        height: 70px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer; }
+      form div.user-data > div.form-item-log-in-button label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        cursor: pointer; }
+      form div.user-data > div.form-item-log-in-button:hover {
+        background: #e54444;
+        color: #ffffff; }
+      form div.user-data > div.form-item-log-in-button:focus {
+        outline: none; }
+    form div.user-data div#login-popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      background: #a89f8f;
+      max-width: 500px;
+      width: 90%;
+      -webkit-box-shadow: 0 0 25px 5px #42445a;
+      -moz-box-shadow: 0 0 25px 5px #42445a;
+      box-shadow: 0 0 25px 5px #42445a; }
+      form div.user-data div#login-popup > input {
+        background: #e54444;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 22px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: .2s;
+        border: 2px solid #e54444; }
+        form div.user-data div#login-popup > input:hover {
+          color: #e54444;
+          background: #ffffff; }
+      form div.user-data div#login-popup > input[value='x'] {
+        align-self: end;
+        padding: .1em .4em;
+        font-size: 20px; }
+      form div.user-data div#login-popup input[type=text], form div.user-data div#login-popup input[type=password] {
+        display: block;
+        background: #ffffff;
+        margin: 0 auto;
+        width: 85%;
+        border-radius: 3px; }
+      form div.user-data div#login-popup input[type=text] {
+        margin: 20px auto 10px auto; }
+      form div.user-data div#login-popup input[type=password] {
+        margin: 10px auto 20px auto; }
+      form div.user-data div#login-popup > :last-child {
+        align-self: center;
+        padding: .3em .6em;
+        margin-bottom: 15px; }
+    form div.user-data > p {
+      text-align: center;
+      margin: 15px 0 30px 0; }
+    form div.user-data div.form-item-create-account {
+      margin: 30px 0; }
+    form div.user-data div#create-account-container div.living-place {
+      display: flex;
+      justify-content: space-between; }
+      form div.user-data div#create-account-container div.living-place > div {
+        width: 49%; }
+  form div.delivery-and-payment {
+    /* DELIVERY */
+    /* PAYMENT */ }
+    form div.delivery-and-payment div#edit-delivery--2 {
+      margin: 30px 0; }
+      form div.delivery-and-payment div#edit-delivery--2 div.form-item-delivery {
+        display: flex;
+        margin: 20px 0; }
+        form div.delivery-and-payment div#edit-delivery--2 div.form-item-delivery input.form-radio {
+          margin: 0 15px 0 8px; }
+        form div.delivery-and-payment div#edit-delivery--2 div.form-item-delivery label {
+          display: inline-flex;
+          align-items: center;
+          width: 100%; }
+          form div.delivery-and-payment div#edit-delivery--2 div.form-item-delivery label img {
+            margin-right: 10px; }
+          form div.delivery-and-payment div#edit-delivery--2 div.form-item-delivery label span.price {
+            margin-left: auto;
+            font-weight: 600; }
+    form div.delivery-and-payment div#edit-payment h2 {
+      margin-bottom: 30px; }
+    form div.delivery-and-payment div#edit-payment div#edit-payment-container-1 {
+      margin-top: 30px; }
+      form div.delivery-and-payment div#edit-payment div#edit-payment-container-1 div.form-item-payment-1 {
+        margin: 20px 0;
+        display: flex;
+        align-items: center; }
+        form div.delivery-and-payment div#edit-payment div#edit-payment-container-1 div.form-item-payment-1 input.form-radio {
+          margin: 0 15px 0 8px; }
+        form div.delivery-and-payment div#edit-payment div#edit-payment-container-1 div.form-item-payment-1 label {
+          display: inline-flex;
+          align-items: center; }
+          form div.delivery-and-payment div#edit-payment div#edit-payment-container-1 div.form-item-payment-1 label img {
+            margin-right: 10px; }
+          form div.delivery-and-payment div#edit-payment div#edit-payment-container-1 div.form-item-payment-1 label span.price {
+            margin-left: auto;
+            font-weight: 600; }
+    form div.delivery-and-payment div#edit-payment div#edit-payment-2 {
+      margin-bottom: 30px; }
+      form div.delivery-and-payment div#edit-payment div#edit-payment-2 div.form-item-payment-2 {
+        margin: 20px 0;
+        display: flex;
+        align-items: center; }
+        form div.delivery-and-payment div#edit-payment div#edit-payment-2 div.form-item-payment-2 input.form-radio {
+          margin: 0 15px 0 8px; }
+        form div.delivery-and-payment div#edit-payment div#edit-payment-2 div.form-item-payment-2 label {
+          display: inline-flex;
+          align-items: center; }
+          form div.delivery-and-payment div#edit-payment div#edit-payment-2 div.form-item-payment-2 label img {
+            margin-right: 10px; }
+          form div.delivery-and-payment div#edit-payment div#edit-payment-2 div.form-item-payment-2 label span.price {
+            margin-left: auto;
+            font-weight: 600; }
+  form div.summary p {
+    margin: 0; }
+  form div.summary div.product {
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #8eb8b9; }
+    form div.summary div.product div.image {
+      height: 50px;
+      width: 80px;
+      background: #757575;
+      margin-right: 10px; }
+    form div.summary div.product div.description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      form div.summary div.product div.description p.name {
+        font-weight: 600; }
+    form div.summary div.product div.price {
+      margin-left: auto;
+      font-weight: 600; }
+  form div.summary div.sum {
+    padding: 15px;
+    border-bottom: 1px dashed #8eb8b9; }
+    form div.summary div.sum p {
+      display: flex;
+      justify-content: space-between; }
+    form div.summary div.sum p.sum-final {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px; }
+  form div.summary div.form-item-comment {
+    margin: 20px 0; }
+    form div.summary div.form-item-comment textarea {
+      height: 100px;
+      margin: 0; }
+  form div.summary div.form-item-terms, form div.summary div.form-item-newsletter {
+    margin: 20px 0; }
+  form div.summary input[type=submit] {
+    cursor: pointer;
+    border: 2px solid #e54444;
+    border-radius: 3px;
+    background: #e54444;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .2s;
+    padding: 1.5em;
+    width: 100%; }
+    form div.summary input[type=submit]:hover {
+      background: #ffffff;
+      color: #e54444; }
+  @media only screen and (max-width: 1200px) {
+    form > div {
+      width: 49%;
+      margin-bottom: 20px; } }
+  @media only screen and (max-width: 750px) {
+    form {
+      justify-content: center; }
+      form > div {
+        width: 95%; } }
+
+/* MESSAGES */
+div[data-drupal-messages] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  background: #a89f8f;
+  max-width: 500px;
+  width: 90%;
+  -webkit-box-shadow: 0 0 25px 5px #42445a;
+  -moz-box-shadow: 0 0 25px 5px #42445a;
+  box-shadow: 0 0 25px 5px #42445a;
+  padding: 3em;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Barlow, serif; }
+
+/*# sourceMappingURL=style.css.map */
